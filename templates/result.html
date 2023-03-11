@@ -39,6 +39,27 @@
                         <td>Comments:</td>
                         <td>{{session['comment']}}</td>
                     </tr>
+                    <tr>
+                        <td>Yes or No?</td>
+                        <td>{{session['radio']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Are you a goofy goober?</td>
+                        <td>{% if 'goober' in session: %}
+                            Yes
+                            {% else: %}
+                            No
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Are you ready?</td>
+                        <td>{% if 'ready' in session: %}
+                            Yes
+                            {% else: %}
+                            No
+                            {% endif %}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
